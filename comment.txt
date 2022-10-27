@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main()
+{
+  int x, y, z;
+
+  // input
+  printf("Enter values of x and y:\n");
+  scanf("%d %d", &x, &y);
+
+  // add
+  z = x + y;
+
+  /* this is a multi line 
+// just to see
+
+  comment test */
+
+  /* single line */
+
+  /* multi
+  klasjdf
+  aklsdjflk
+  // 
+
+  // sdfjklsklf
+  
+
+  // output
+  printf("\nSum = %d", x + y);
+  printf("\nz = %d + %d = %d", x, y, z);
+}
