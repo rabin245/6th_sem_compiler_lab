@@ -1,6 +1,3 @@
-from ast import operator
-
-
 def isKeyword(word):
     KEYWORDS = ['if', 'else', 'while', 'for', 'int', 'float',
                 'char', 'double', 'return', 'break', 'continue', 'void']
