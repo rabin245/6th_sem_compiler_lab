@@ -62,6 +62,9 @@ def main():
     noOFProductions = int(input("Enter numbers of productions: "))
 
     print("***Note: # is used for epsilon***")
+    print("***Note: Use '->' for production. [ E->A|B ]***")
+    print(
+        "***Note: Only use single letter symbols. [E', id, T', ...] are not accepted.\nReplace with some other symbols [X, i, Y,...]***")
     print("Enter productions: ")
     for i in range(noOFProductions):
         productions.append(input())
@@ -127,7 +130,7 @@ def main():
     # print('Follow: ')
     # print(follow)
 
-    print(terminals)
+    # print(terminals)
     print('{:15} {:15} {:15}'.format('Non-Terminal', 'First', 'Follow'))
     for nonTerminal in nonTerminals:
         print('{:15} {:15} {:15}'.format(nonTerminal,

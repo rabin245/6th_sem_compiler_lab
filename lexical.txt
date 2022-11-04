@@ -1,8 +1,13 @@
 #include <stdio.h>
 int main()
 {
-  int x, y, z; if
-  x = 1;
-  y = 2;
-  z = x + y;
+  int first_num, secondNumber, result;
+  first_num = 10;
+  secondNumber = 20;
+  if (first_num > secondNumber){
+    result = first_num - secondNumber;
+  }
+  else {
+  result =  secondNumber - first_num;
+  }
 }

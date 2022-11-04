@@ -1,3 +1,6 @@
+from ast import operator
+
+
 def isKeyword(word):
     KEYWORDS = ['if', 'else', 'while', 'for', 'int', 'float',
                 'char', 'double', 'return', 'break', 'continue', 'void']
@@ -8,11 +11,15 @@ def isKeyword(word):
 
 
 def main():
-    # linenumber = 1
     OPERATORS = ['+', '-', '*', '/', '=', '>', '<', '==', '>=', '<=', '!=']
 
     f = open('lexical.txt', 'r')
     lines = f.readlines()
+
+    operators = []
+    keywords = []
+    identifiers = []
+    constInts = []
 
     for line in lines:
         words = line.split()
@@ -27,12 +34,30 @@ def main():
             if word in '#include':
                 continue
             elif word in OPERATORS:
-                print("Operator: ", word)
+                operators.append(word)
             elif isKeyword(word):
-                print("Keyword: ", word)
+                keywords.append(word)
             elif word.isidentifier():
-                print("Identifier: ", word)
-        # linenumber += 1
+                identifiers.append(word)
+            elif word.isnumeric():
+                constInts.append(word)
+
+    print('Keywords:')
+    for i in set(keywords):
+        print(i, end=' ')
+    print('\n')
+    print('Identifiers:')
+    for i in set(identifiers):
+        print(i, end=' ')
+    print('\n')
+    print('Operators:')
+    for i in set(operators):
+        print(i, end=' ')
+    print('\n')
+    print('Constant Ints:')
+    for i in set(constInts):
+        print(i, end=' ')
+    print('\n')
 
 
 if __name__ == "__main__":

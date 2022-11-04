@@ -1,9 +1,10 @@
 def main():
     identifier = input("Enter an identifier: ")
+    identifier = identifier.strip()
 
-    # if identifier.isidentifier():
-    #     print("This is a valid identifier")
-    #     return
+    if " " in identifier:
+        print('Identifier is rejected')
+        return
 
     if identifier[0].isalpha() or identifier[0] == '_':
         if identifier[1:].isalnum() or identifier[1:].find('_') != -1:

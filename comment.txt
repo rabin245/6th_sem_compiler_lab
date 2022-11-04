@@ -1,32 +1,21 @@
 #include <stdio.h>
-
 int main()
 {
   int x, y, z;
-
-  // input
+  // take input from user
   printf("Enter values of x and y:\n");
   scanf("%d %d", &x, &y);
-
-  // add
-  z = x + y;
-
+  // product
+  z = x * y;
   /* this is a multi line 
-// just to see
-
-  comment test */
-
-  /* single line */
-
-  /* multi
+  // testing single line coment inside multi line comment
+  enf of multi line comment */
+  /* single line testing again */
+  /* again multi line cmnt
   klasjdf
   aklsdjflk
   // 
-
   // sdfjklsklf
-  
-
   // output
-  printf("\nSum = %d", x + y);
-  printf("\nz = %d + %d = %d", x, y, z);
+  printf("\nz = %d * %d = %d", x, y, z);
 }
